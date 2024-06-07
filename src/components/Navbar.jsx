@@ -15,16 +15,16 @@ const Navbar = () => {
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="AddStudent.jsx">Add Student</a>
+          <a class="nav-link" href="/">Add Student</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="SearchStudent.jsx">Search</a>
+          <a class="nav-link" href="/">Search</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="DeleteStudent.jsx">Delete</a>
+          <a class="nav-link" href="/">Delete</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ViewAll.jsx">View</a>
+          <a class="nav-link" href="/">View</a>
         </li>
 
       </ul>
