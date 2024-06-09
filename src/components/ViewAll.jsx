@@ -26,7 +26,7 @@ const ViewAll = () => {
                                             <h5 className="card-title">{value.name}</h5>
                                             <p className="card-text">Admno : {value.Admno}</p>
                                             <p className="card-text">RollNo : {value.RollNo}</p>
-                                            <a href="#" class="btn btn-primary">Go to more</a>
+                                            <a href="#" class="btn btn-primary">Go for more</a>
                                         </div>
                                     </div> 
                                     </div>
