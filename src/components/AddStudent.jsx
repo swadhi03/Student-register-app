@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
+import axios from 'axios'
 
 const AddStudent = () => {
     const [data,changeData]=useState([
@@ -16,6 +17,21 @@ const AddStudent = () => {
     }
     const readValue=()=>{
         console.log(data)
+        axios.post("http://localhost:8080/adding",data).then(
+            (response)=>{
+                console.log(response.data)
+        if(response.data.status=="success")
+            {
+                alert("success")
+            }
+            else{
+                alert("Error")
+            }
+    }).catch(
+        (error)=>{
+            console.log(error.message)
+        }
+    ).finally()
     }
   return (
     <div>
@@ -37,7 +53,7 @@ const AddStudent = () => {
                             <input type="text" className="form-control" name='admNo' value={data.admNo} onChange={inputHandler}/>
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <label htmlFor="" className="form-control">College</label>
+                            <label htmlFor="" className="form-label">College</label>
                             <textarea name="college" id="" className="form-control" value={data.college} onChange={inputHandler}/>
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
